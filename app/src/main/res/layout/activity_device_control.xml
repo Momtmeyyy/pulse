@@ -11,38 +11,38 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="58dp"
         android:orientation="horizontal">
 
         <Button
-            android:text="Rozpocznij"
+            android:id="@+id/onBtn"
             android:layout_width="match_parent"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="5dp"
-            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@drawable/rounded_button"
+            android:text="Начать"
             android:textColor="@android:color/white"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:id="@+id/onBtn"/>
+            android:textStyle="bold" />
 
         <Button
-            android:text="Zakończ"
+            android:id="@+id/offBtn"
             android:layout_width="match_parent"
-            android:layout_weight="1"
+            android:layout_height="58dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="20dp"
-            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@drawable/rounded_button"
+            android:text="Стоп"
             android:textColor="@android:color/white"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:id="@+id/offBtn"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/chart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 </LinearLayout>

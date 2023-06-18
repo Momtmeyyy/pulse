@@ -129,12 +129,12 @@ public class DeviceControlActivity extends AppCompatActivity {
                 layout.setOrientation(LinearLayout.VERTICAL);
 
                 final EditText simulationIdField = new EditText(DeviceControlActivity.this);
-                simulationIdField.setHint("Identyfikator symulacji");
+                simulationIdField.setHint("Идентификатор симуляции");
                 simulationIdField.setInputType(InputType.TYPE_CLASS_NUMBER);
                 layout.addView(simulationIdField);
 
                 final EditText serverIpField = new EditText(DeviceControlActivity.this);
-                serverIpField.setHint("IP Serwera");
+                serverIpField.setHint("URL сервера");
                 layout.addView(serverIpField);
 
                 builder.setView(layout);
@@ -148,7 +148,7 @@ public class DeviceControlActivity extends AppCompatActivity {
                         startHeartRateMeasurement();
                     }
                 });
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.cancel();
@@ -166,7 +166,7 @@ public class DeviceControlActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View v) {
-                AndroidUtils.toast(DeviceControlActivity.this, "Wyłączono czytnik", Toast.LENGTH_SHORT);
+                AndroidUtils.toast(DeviceControlActivity.this, "Стоп", Toast.LENGTH_SHORT);
 
                 service.shutdownNow();
                 heartrateGattCallback.enableRealtimeHeartRateMeasurement(false);
@@ -190,7 +190,7 @@ public class DeviceControlActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void startHeartRateMeasurement(){
-        AndroidUtils.toast(DeviceControlActivity.this, "Odczyt pulsu rozpoczęty", Toast.LENGTH_SHORT);
+        AndroidUtils.toast(DeviceControlActivity.this, "Считываем пульс...", Toast.LENGTH_SHORT);
 
         heartrateGattCallback = new HeartRateGattCallback(MainActivity.getMiBandSupport(), DeviceControlActivity.this) {
             @Override
@@ -373,7 +373,7 @@ public class DeviceControlActivity extends AppCompatActivity {
     }
 
     private LineDataSet createSet() {
-        LineDataSet set = new LineDataSet(null, "Puls");
+        LineDataSet set = new LineDataSet(null, "Пульс");
         set.setAxisDependency(YAxis.AxisDependency.LEFT);
         set.setCircleColor(Color.RED);
         set.setLineWidth(2f);
