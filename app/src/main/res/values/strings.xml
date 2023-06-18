@@ -1,14 +1,13 @@
 <resources>
-    <string name="app_name">MiBand Pulse</string>
+    <string name="app_name">MedSystems</string>
 
-    <string name="pairing_with">Trwa parowanie z:\n%1s\n%2s...</string>
-    <string name="start_scanning">Rozpocznij skanowanie</string>
-    <string name="stop_scanning">Zakończ skanowanie</string>
+    <string name="pairing_with">Сопряжение:\n1s\n2s...</string>
+    <string name="start_scanning">Начать сканирование</string>
+    <string name="stop_scanning">Завершить сканирование</string>
 
-    <string name="discovery_note">Powyżej pojawi się lista dostępnych urządzeń Bluetooth. Jeżeli korzystasz z Android 6+ uruchom lokalizację GPS.</string>
-    <string name="note">Uwaga:</string>
-    <string name="pairing_note">Jeżeli Twoja opaska Mi Band zaświeci się i zawibruje, dotknij kilkukrotnie przycisku.</string>
-    <string name="device_image">Ikona urządzenia</string>
-    <string name="item_name">Nazwa</string>
-    <string name="item_description">Opis</string>
+
+    <string name="pairing_note">Если ваш MIBand загорится  и завибрирует, зажмите основную кнопку.</string>
+    <string name="device_image">Устройство:</string>
+    <string name="item_name">Название</string>
+    <string name="item_description">Описание</string>
 </resources>
